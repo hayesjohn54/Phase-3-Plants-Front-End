@@ -1,13 +1,124 @@
-body {
+body{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(68, 22, 4);
+  overflow-x: hidden;
+}
+.nav {
+  background-color: #000;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav a { 
+  float: right;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 20px
+}
+
+.nav a:hover {
+  background-color: grey;
+  color: #fff;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  color: #696969;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  width: 15%;
+}
+
+.card {
+  background-color: rgb(5, 63, 5);
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+}
+
+.card__image:hover{
+  filter: contrast(100%);
+}
+
+
+.card__title {
+  color: rgb(167, 170, 148);
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text, .card__detail p {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color: rgb(167, 170, 148)
+  
+}
+
+.card__detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card__detail p {
+  text-align: center;
+}
+
+.card__detail button{
+  text-align: center;
+}
+
+@media(max-width: 700px){
+  .cards__item{
+    width: 50%;
+  }
 }
