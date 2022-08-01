@@ -4,25 +4,29 @@ body{
   background-color: rgb(68, 22, 4);
   overflow-x: hidden;
 }
-.nav {
-  background-color: #000;
-  overflow: hidden;
-}
 
-.nav a { 
+.navbar {
   float: right;
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: 5px 5px;
-  text-decoration: none;
-  font-size: 20px
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 20px
 }
 
-.nav a:hover {
-  background-color: grey;
+.navbar__title {
+  display: inline;
   color: #fff;
+  font-size: 35px;
 }
+
+.navbar__item {
+  padding: 16px 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
 
 img {
   height: auto;
