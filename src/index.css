@@ -42,18 +42,17 @@ img {
   width: 100%;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 .cards__item {
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
   padding: 1rem;
   width: 15%;
+
+
+  
 }
 
 .card {
@@ -133,4 +132,15 @@ img {
   .cards__item{
     width: 50%;
   }
+}
+
+.home_title{
+  color: rgb(167, 170, 148);
+  text-align: center;
+  font-size: 5em;
+}
+
+.herbEmoji{
+  text-align: center;
+  font-size: 10em;
 }

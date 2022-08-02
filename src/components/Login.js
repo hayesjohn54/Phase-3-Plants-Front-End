@@ -1,5 +1,3 @@
-
-
 function Login(){
 
     function handleSubmit(event){
