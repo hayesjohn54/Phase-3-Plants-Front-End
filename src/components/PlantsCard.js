@@ -1,4 +1,10 @@
+
 function PlantCard({plant}){
+
+   
+   
+
+
     return(
         <li className="cards__item">
         <div className="card">
