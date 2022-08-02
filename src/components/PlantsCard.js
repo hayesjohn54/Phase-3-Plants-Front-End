@@ -1,4 +1,9 @@
+
 function PlantCard(){
+   
+   
+
+
     return(
         <li className="cards__item">
         <div className="card">

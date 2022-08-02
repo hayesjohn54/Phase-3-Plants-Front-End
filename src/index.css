@@ -5,26 +5,24 @@ body{
   overflow-x: hidden;
 }
 
-.navbar {
+.nav {
+  background-color: rgb(5, 63, 5);
+  overflow: hidden;
+}
+
+.nav a { 
   float: right;
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-size: 20px
-}
-
-.navbar__title {
-  display: inline;
+  display: block;
   color: #fff;
-  font-size: 35px;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 20px
 }
 
-.navbar__item {
-  padding: 16px 16px;
-  cursor: pointer;
-  vertical-align: middle;
+.nav a:hover {
+  background-color: grey;
+  color: #fff;
 }
 
 
@@ -119,6 +117,16 @@ img {
 
 .card__detail button{
   text-align: center;
+}
+
+.login_container {
+  font-size: 2em;
+  text-align: center;
+
+}
+
+.loginHeader {
+  color: rgb(167, 170, 148);
 }
 
 @media(max-width: 700px){
