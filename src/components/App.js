@@ -5,6 +5,7 @@ import PlantContainer from './PlantContainer';
 import {Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
+import NewPlantForm from './NewPlantForm';
 
 
 function App() {
