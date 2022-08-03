@@ -8,6 +8,7 @@ import Login from './Login';
 import NewPlantForm from './NewPlantForm';
 
 import UserContainer from './UserContainer';
+import UserForm from './UserForm';
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
           
           <Route path="//NewPlantform" element={<NewPlantForm/>}/>
           <Route path="/usercontainer" element={<UserContainer users={users}/>}/>
-          
+          <Route path="/userForm" element={<UserForm setUsers={setUsers}/>}/>
         </Routes>
 
     </div>
