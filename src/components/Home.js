@@ -2,7 +2,14 @@ import React from 'react'
 
 function Home(){
     return (
-        <h1>THIS IS THE HOME PAGE</h1>
+            <div className='homeDiv'>
+            <h1 className="home_title">Plant Buddies</h1>
+            <h3 className='herbEmoji'>🌿</h3>
+            </div>
+        
+
+       
+         
     )
 }
 

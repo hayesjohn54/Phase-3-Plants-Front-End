@@ -20,12 +20,10 @@ function App() {
   return (
     <div>
       <NavBar/>
-
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/plantcontainer" element={<PlantContainer plants={plants}/>}/>
-          <Route path="/NewPlantForm" element={<NewPlantForm setPlants={setPlants}/>}/>
           
         </Routes>
 
