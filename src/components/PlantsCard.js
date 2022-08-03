@@ -1,6 +1,6 @@
 
 function PlantCard({plant}){
-
+  
    
    function handleDelete(){
     fetch(`http://localhost:9292/plants/${plant.id}`, { method: 'DELETE' })
@@ -9,11 +9,16 @@ function PlantCard({plant}){
     })
    }
 
+   function handleAdd(){
+    console.log('test');
+   }
+
 
 
     return(
         <li className="cards__item">
         <div className="card">
+        <button className="card__button" onClick={handleAdd}>ADD</button>
           <img
             src={plant.image}
             alt='Groot'
@@ -26,6 +31,8 @@ function PlantCard({plant}){
               <p>${plant.price}</p>
             </div>
           </div>
+          <div className='card_inventory'>Inventory: PLACEHOLDER</div>
+          
         </div>
         <button onClick={handleDelete}>X</button>
       </li>

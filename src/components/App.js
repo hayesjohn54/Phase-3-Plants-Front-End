@@ -6,10 +6,12 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
 import NewPlantForm from './NewPlantForm';
+import Collection from './Collection';
 
 
 function App() {
  const [plants, setPlants]=useState([])
+
 
   useEffect(()=>{
     fetch('http://localhost:9292/plants')
@@ -24,7 +26,9 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/plantcontainer" element={<PlantContainer plants={plants}/>}/>
+          <Route path="/collection" element={<Collection/>}/>
           <Route path="//NewPlantform" element={<NewPlantForm/>}/>
+          
         </Routes>
 
     </div>

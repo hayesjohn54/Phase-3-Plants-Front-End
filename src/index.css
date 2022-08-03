@@ -53,10 +53,6 @@ img {
 .cards__item {
   display: inline-block;
 
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-
   padding: 1rem;
   width: 15%;
 
@@ -96,6 +92,16 @@ img {
   filter: contrast(100%);
 }
 
+.card__button{
+  background-color:  rgb(5, 63, 5);
+  border: none;
+  color: rgb(167, 170, 148);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; 
+}
 
 .card__title {
   color: rgb(167, 170, 148);
