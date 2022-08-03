@@ -161,3 +161,37 @@ img {
   text-align: center;
   font-size: 10em;
 }
+.users_item{
+  display: inline-block;
+
+  padding: 1rem;
+  width: 15%;
+}
+.user_image{
+  border-radius: 4px;
+  width: 300px;
+  height: auto
+}
+
+.user_card{
+  background-color: rgb(5, 63, 5);
+  border-radius: 10px;
+  
+ 
+
+ 
+}
+
+.user_content{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.user_name{
+  color: rgb(167, 170, 148);
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

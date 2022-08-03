@@ -6,7 +6,7 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
 import NewPlantForm from './NewPlantForm';
-import Collection from './Collection';
+
 import UserContainer from './UserContainer';
 
 
@@ -31,14 +31,20 @@ function App() {
   },[])
   console.log(users)
 
+
+  function handleUpdatePlants(updatedPlant){
+    const updatePlant = plants.map((plant)=> plant.id === plants.id ? updatedPlant : plant);
+    setPlants(updatePlant)
+  }
+
   return (
     <div>
       <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/plantcontainer" element={<PlantContainer plants={plants}/>}/>
-          <Route path="/collection" element={<Collection/>}/>
+          <Route path="/plantcontainer" element={<PlantContainer plants={plants} onUpdatePlant={handleUpdatePlants}/>}/>
+          
           <Route path="//NewPlantform" element={<NewPlantForm/>}/>
           <Route path="/usercontainer" element={<UserContainer users={users}/>}/>
           

@@ -1,5 +1,7 @@
+import React, {useState} from 'react';
 
-function PlantCard({plant}){
+function PlantCard({plant, onUpdatePlant}){
+  const [likes, setLikes] = useState(plant.likes)
   
    
    function handleDelete(){
@@ -9,16 +11,28 @@ function PlantCard({plant}){
     })
    }
 
-   function handleAdd(){
-    console.log('test');
-   }
-
-
+   
+   
+    
+    function handleLikes(){
+      fetch(` http://localhost:9292/plants/${plant.id}`,{
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          likes: likes+1,
+        }),
+      })
+      .then((r) => r.json())
+      .then((onUpdatePlant) => console.log(onUpdatePlant));
+      setLikes(likes=>likes+1)
+    }
 
     return(
         <li className="cards__item">
         <div className="card">
-        <button className="card__button" onClick={handleAdd}>ADD</button>
+        
           <img
             src={plant.image}
             alt='Groot'
@@ -28,10 +42,11 @@ function PlantCard({plant}){
             <div className="card__title">{plant.name}</div>
             <p className="card__text">{plant.description}</p>
             <div className="card__detail">
-              <p>${plant.price}</p>
+              <p>{`${likes} Likes`}</p>
+              <button onClick={handleLikes}>❤️</button>
             </div>
           </div>
-          <div className='card_inventory'>Inventory: PLACEHOLDER</div>
+          
           
         </div>
         <button onClick={handleDelete}>X</button>
