@@ -7,6 +7,7 @@ import Home from './Home';
 import Login from './Login';
 import NewPlantForm from './NewPlantForm';
 import Collection from './Collection';
+import UserContainer from './UserContainer';
 
 
 function App() {
@@ -19,6 +20,17 @@ function App() {
       .then(plantsData => setPlants(plantsData))
   },[])
   console.log(plants)
+
+  const [users, setUsers]=useState([])
+
+
+  useEffect(()=>{
+    fetch('http://localhost:9292/users')
+      .then(res=>res.json())
+      .then(usersData => setUsers(usersData))
+  },[])
+  console.log(users)
+
   return (
     <div>
       <NavBar/>
@@ -28,6 +40,7 @@ function App() {
           <Route path="/plantcontainer" element={<PlantContainer plants={plants}/>}/>
           <Route path="/collection" element={<Collection/>}/>
           <Route path="//NewPlantform" element={<NewPlantForm/>}/>
+          <Route path="/usercontainer" element={<UserContainer users={users}/>}/>
           
         </Routes>
 
