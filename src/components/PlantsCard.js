@@ -2,7 +2,13 @@
 function PlantCard({plant}){
 
    
-   
+   function handleDelete(){
+    fetch(`http://localhost:9292/plants/${plant.id}`, { method: 'DELETE' })
+    .then(async response => {
+        const isJson = response.headers.get('content-type')?.includes('application/json');
+    })
+   }
+
 
 
     return(
@@ -21,6 +27,7 @@ function PlantCard({plant}){
             </div>
           </div>
         </div>
+        <button onClick={handleDelete}>X</button>
       </li>
     )
 }

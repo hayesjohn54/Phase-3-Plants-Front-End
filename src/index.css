@@ -5,6 +5,12 @@ body{
   overflow-x: hidden;
 }
 
+.nav-title{
+  display: inline;
+  color: #fff;
+  font-size: 35px;
+}
+
 .nav {
   background-color: rgb(5, 63, 5);
   overflow: hidden;
@@ -51,7 +57,7 @@ img {
 }
 
 .cards__item {
-  display: flex;
+  display: inline-block;
   padding: 1rem;
   width: 15%;
 }
@@ -133,4 +139,9 @@ img {
   .cards__item{
     width: 50%;
   }
+}
+
+.plant-form {
+  padding: 60px 30%;
+  text-align: center;
 }

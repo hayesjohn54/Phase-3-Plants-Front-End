@@ -5,6 +5,7 @@ import PlantContainer from './PlantContainer';
 import {Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
+import NewPlantForm from './NewPlantForm';
 
 
 function App() {
@@ -20,12 +21,11 @@ function App() {
     <div>
       <NavBar/>
 
-      <PlantContainer plants={plants}/>
-=======
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/plantcontainer" element={<PlantContainer/>}/>
+          <Route path="/plantcontainer" element={<PlantContainer plants={plants}/>}/>
+          <Route path="/NewPlantForm" element={<NewPlantForm setPlants={setPlants}/>}/>
           
         </Routes>
 
