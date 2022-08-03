@@ -46,7 +46,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/plantcontainer" element={<PlantContainer plants={plants} onUpdatePlant={handleUpdatePlants}/>}/>
           
-          <Route path="//NewPlantform" element={<NewPlantForm/>}/>
+          <Route path="//NewPlantform" element={<NewPlantForm setPlants={setPlants}/>}/>
           <Route path="/usercontainer" element={<UserContainer users={users}/>}/>
           <Route path="/userForm" element={<UserForm setUsers={setUsers}/>}/>
         </Routes>

@@ -4,7 +4,7 @@ function NewPlantForm({setPlants}){
         name:"",
         image:"",
         description:"",
-        likes:"",
+        likes:0,
         user_id: ""
     })
 
@@ -47,9 +47,7 @@ function NewPlantForm({setPlants}){
     const handleUserId = (event) => {
         setValues({...values, user_id:event.target.value})
     }
-    const handleLikes = (event) => {
-        setValues({...values, likes:event.target.value})
-    }
+    
 
     return(
         <div className="form-container">
@@ -87,14 +85,7 @@ function NewPlantForm({setPlants}){
                     placeholder="user_id"
                     name="plantUser_id"/>
                 </div>
-                <div>
-                <input 
-                    onChange={handleLikes}
-                    value={values.likes}
-                    className="likes"
-                    placeholder="likes"
-                    name="plantLikes"/>
-                </div>
+                
                 <input className="submit" type="submit"/>
             </form>
             
